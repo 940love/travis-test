@@ -1,6 +1,7 @@
 language: java
 jdk:
   - openjdk8
+  -
 before_install:
   - chmod +x gradlew
 branches:
@@ -15,8 +16,6 @@ cache:
 
 script: "./gradlew clean build"
 
-# CI 실행 완료시 메일로 알람
+# CI 실행 완료시 슬랙으로 알람
 notifications:
-  email:
-    recipients:
-      - 940love@naver.com
+  slack: nexters-moss:0ZD2IZ1qHh0S5TAPR8PTnTj5
